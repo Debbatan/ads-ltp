@@ -243,7 +243,9 @@ inicioalgoritmo
 			v_maior 2 = v3
 		fimse
 	fimse
-
+	
+	escreva "A soma dos dois maiores números será: ", v_maior1 + v_maior2;
+	
 fimalgoritmo
 		
 10. Escreva um algoritmo, em portugol, que lê 3 valores (A, B e C)
