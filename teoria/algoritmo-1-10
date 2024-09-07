@@ -1,0 +1,289 @@
+1. Faça um algoritmo, em portugol, que recebe como entradas o salário de um
+funcionário e um percentual de aumento. Aplique o percentual sobre o salário e
+mostre, como saída, o novo salário.
+
+inicioalgoritmo
+
+	declare real salario, percentual, aumento, novo_salario;
+	
+	escreva "Informe o salário:";
+	leia salario;
+
+	escreva "Informe o percentual de aumento:";
+	leia percentual;
+	
+	aumento = salario * (percentual / 100);
+	novo_salario = salario + aumento;
+
+	escreva "Seu novo salário será de ", novo_salario, " reais".;
+
+fimalgoritmo
+
+2. Faça um algoritmo, em portugol, que lê as dimensões de um retângulo (base e
+altura), calcula e escreve a área do retângulo.
+
+inicioalgoritmo
+
+	declare real, base, altura, area;
+	
+	escreva "Insira a base:";
+	leia base;
+
+	escreva "Insira a altura:";
+	leia altura;
+
+	area = (base * altura) / 2;	;
+
+	escreva "A área deste triângulo é de valor: ", area;
+
+fimalgoritmo
+
+3. Faça um algoritmo, em portugol, que leia a idade de uma pessoa expressa em
+anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias.
+Considerar ano com 365 dias e mês com 30 dias.
+
+inicioalgoritmo
+
+	declare inteiro anos, meses, dias, total_dias;
+
+	escreva "Informe a idade em anos:";
+	leia anos;
+	
+	escreva "Informe o número de meses que não completam um ano:";
+	leia meses;
+
+	escreva "Informe o número de dias que não completam um mês:";
+	leia dias;
+
+	total_dias = (anos * 365) + (meses * 30) + dias;
+
+	escreva "Esta pessoa viveu ", calculo_dias, " dias.";
+
+fimalgoritmo
+
+4. Escreva um algoritmo, em portugol, que armazene o valor 10 em uma variável A
+e o valor 20 em uma variável B. A seguir (utilizando apenas atribuições entre
+variáveis) troque os seus conteúdos fazendo com que o valor que está em A passe
+para B e vice-versa. Ao final, escrever os valores que ficaram armazenados nas
+variáveis. 
+
+inicioalgoritmo
+
+	declare inteiro a, b;
+	declare inteiro aY;
+
+	a = 10;
+	b = 20;
+
+	a = a + b;
+	b = a - b;
+	a = a - b;
+
+	escreva a, b;
+
+fimalgoritmo
+
+5. Escreva um algoritmo, em portugol, que lê o ano atual e o ano de nascimento
+de uma pessoa. Escrever uma mensagem que diga se ela poderá ou não votar este
+ano (não é necessário considerar o mês em que a pessoa nasceu).
+
+inicioalgoritmo
+
+	declare inteiro ano_atual, ano_nascimento, idade;
+	
+	escreva "Informe o ano atual:";
+	leia ano_atual;
+
+	escreva "Informe o ano de nascimento:";
+	leia ano_nascimento;
+
+	idade = ano_atual - ano_nascimento;
+
+	se idade >= 16 entao
+	inicio
+		escreva "Poderá votar este ano.";
+	fimse
+	senao
+	inicio
+		escreva "Não poderá votar este ano.";
+	fimse
+
+fimalgoritmo
+
+6. Escreva um algoritmo, em Portugol, que lê dois valores (considere que não
+serão lidos valores iguais) e escreva-os em ordem crescente.
+
+
+inicioalgoritmo
+
+	declare inteiro v1, v2;
+	
+	escreva "Digite o primeiro valor:";
+	leia v1;
+
+	escreva "Digite o segundo valor:";
+	leia v2;
+
+	se v1 < v2 entao
+	inicio
+		escreva "Ordem crescente: ", v1, " ", v2;
+	fimse
+	senao
+	inicio
+		escreva "Ordem crescente: ", v2, " ", v1;
+	fimse
+
+fimalgoritmo
+
+7. A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário
+que trabalhar mais de 40 horas receberá hora extra cujo cálculo é o valor da
+hora regular com um acréscimo de 50%. Escreva um algoritmo que leia o número de
+horas trabalhadas em um mês, o salário por hora e escreva o salário total do
+funcionário, que deverá ser acrescido das horas extras, caso tenham sido
+trabalhadas (considere que o mês possua 4 semanas exatas).
+
+inicioalgoritmo
+	
+	declare real horas_trabalhadas_mes, salario_hora, valor_extra, horas_extras, salario_total;
+
+	escreva "Informe o número de horas trabalhadas no mês:";
+	leia horas trabalhadas_mes;
+
+	escreva "Informe a renda por hora:";
+	leia salario_hora;
+
+	se horas_trabalhadas_mes > 160 entao
+	inicio
+		horas_extras = horas_trabalhadas_mes - 160;
+		valor_extra = salario_hora * 1.50 * horas_extras;
+		salario_total = (salario_hora * 160) + valor_extra;
+		escreva "O salário, com acréscimo de extras, será de: ", salario_total, " reais."
+	fimse
+	senao
+	inicio
+		escreva "O salário será de: ", horas_trabalhadas_mes * salario_hora, " reais.";
+	fimse
+
+fimalgoritmo
+	
+8. Faça um algoritmo para ler: quantidade atual em estoque, quantidade máxima
+em estoque e quantidade mínima em estoque de um produto. Calcular e escrever a
+quantidade média ((quantidade média = quantidade máxima + quantidade
+mínima)/2). Se a quantidade em estoque for maior ou igual a quantidade média
+escrever a mensagem 'Não efetuar compra', senão escrever a mensagem 'Efetuar
+compra'.
+	
+inicioalgoritmo
+
+	declare inteiro qnt_atual, qnt_maxima, qnt_minima, media;
+	
+	escreva "Informe a quantidade atual em estoque:";
+	leia qnt_atual;
+
+	escreva "Informe a quantidade máxima do estoque:";
+	leia qnt_maxima;
+
+	escreva "Informe a quantidade mínima do estoque:";
+	leia qnt_minima;
+
+	media = (qnt_maxima + qnt_minima) / 2;
+	
+	se qnt_atual >= media entao
+	inicio
+		escreva "Não efetuar compra.";
+	fimse
+	senao
+	inicio
+		escreva "Efetuar compra.";
+	fimse
+
+fimalgoritmo
+
+9. Faça um algoritmo que lê 3 valores (considere que não serão informados
+valores iguais) e escrever a soma dos 2 maiores. (???)
+
+inicioalgoritmo
+
+	declare v1, v2, v3, v_maior1, v_maior2;
+	
+	escreva "Informe o primeiro valor";
+	leia v1;
+	
+	escreva "Informe o segundo valor";
+	leia v2;
+	
+	escreva "Informe o terceiro valor";
+	leia v3;
+
+	v_maior1 = v1;
+	v_maior2 = v2;
+
+	se v2 > v_maior1 entao
+	inicio
+		v_maior2 = v_maior1;
+		v_maior1 = v2;
+	fimse
+	senao
+	inicio	
+		se v2 > v_maior2
+		inicio
+			v_maior2 = v2
+		fimse
+	fimse
+
+	se v3 > v_maior1 entao
+	inicio
+		v_maior2 = v_maior1
+		v_maior1 = v3
+	fimse
+	senao
+	inicio
+		se v3 > v_maior2 entao
+		inicio
+			v_maior 2 = v3
+		fimse
+	fimse
+
+fimalgoritmo
+		
+10. Escreva um algoritmo, em portugol, que lê 3 valores (A, B e C)
+representando as medidas dos lados de um triângulo e escrever se formam ou não
+um triângulo. OBS: para formar um triângulo, o valor de cada lado deve ser
+menor que a soma dos outros 2 lados.
+
+inicioalgoritmo
+	
+	declare real a, b, c;
+	
+	escreva "Informe o primeiro valor:";
+	leia a;
+	
+	escreva "Informe o segundo valor:";
+	leia b;
+
+	escreva "Informe o terceiro valor:";
+	leia c;
+	
+	se (a < b + c) e (b < a + c) e (c < a + b) entao
+	inicio
+		escreva "Os valores formam um triângulo.";
+	fimse
+	senao
+	inicio
+		escreva "Os valores não formam um triângulo.";
+	fimse
+	
+fimalgoritmo
+			
+
+
+
+
+
+
+
+
+
+
+
+
